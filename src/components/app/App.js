@@ -1,3 +1,4 @@
+import { useState } from "react/cjs/react.development";
 import AppHeader from "../appHeader/AppHeader";
 import RandomChar from "../randomChar/RandomChar";
 import CharList from "../charList/CharList";
@@ -5,14 +6,13 @@ import CharInfo from "../charInfo/CharInfo";
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 
 import decoration from '../../resources/img/vision.png';
-import { useState } from "react/cjs/react.development";
 
 const App = () => {
 
-   const [selectedChar,setSelectedChar] = useState(null);
+   const [selectedChar,setChar] = useState(null);
 
    const onCharSelected = (id) => {
-      setSelectedChar(id);
+      setChar(id);
    }
 
    return (
